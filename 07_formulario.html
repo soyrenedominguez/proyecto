@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SOLICITUD DE INSCRIPCIÓN</title>
+  </head>
+
+  <body>
+    <input type="button" value="Borrar" onclick="borrar()" />
+    <div id="formato">
+      <table width="100%">
+        <tr>
+          <td>
+            <img
+              src="https://www.ranklogos.com/wp-content/uploads/2015/10/Gobierno-Del-Estado-De-Mxico-Logo.jpg"
+              alt=""
+              width="100"
+            />
+          </td>
+          <td></td>
+          <td align="right">
+            <img
+              src="https://seeklogo.com/images/C/cecytem-logo-57EA94498B-seeklogo.com.png"
+              alt=""
+              width="50"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" align="center">
+            <p><b>Solicitud de Incripción</b></p>
+            <p>Ciclo Escolar 2022-2023</p>
+            <p><b>"TODOS LOS CAMPOS SON OBLIGATORIOS"</b></p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <p>INTRUCCIONES:</p>
+            <ul>
+              <li>
+                Registra cuidadosamente los datos que se solicitan, estós serán
+                utilizados para conformar tu expediente en la base de datos del
+                sistema de control escolar.
+              </li>
+              <li>
+                Escribir con letras mayúsculas que sean legibles y con tinta
+                negra.
+              </li>
+            </ul>
+          </td>
+          <td>
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfefBupiF3VrmW_pzNcSoXHexXyBUW6GC3bk0yM_u6EFm6DdY8i6q8rXG53CiSO01xoco&usqp=CAU"
+              height="100"
+              alt=""
+            />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            No. de folio COMIPEMS: <span id="c1"></span> No. Aciertos COMIPEMS:
+            <span id="c2"></span> Carrera: <span id="c3"></span> Fecha:<span
+              id="c4"
+            ></span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3"><h3>Datos personales del aspirante:</h3></td>
+        </tr>
+        <tr>
+          <td colspan="3">Nombre:<span id="c5"></span></td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            Fecha de Nacimiento:<span id="c6"></span> Lugar de Nacimiento:
+            <span id="c7"></span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            CURP (18 dígitos):<br />
+            <span id="c8"></span>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="form">
+      <center>
+        <h1>SOLICITUD DE INSCRIPCIÓN</h1>
+        <hr />
+        <form>
+          <table>
+            <tr>
+              <td colspan="2">
+                <center><h2>DATOS PERSONALES DEL ASPIRANTE</h2></center>
+                <hr />
+              </td>
+            </tr>
+            <tr>
+              <td>Foto:</td>
+              <td><input type="file" name="foto" id="foto" /></td>
+            </tr>
+            <tr>
+              <td>Folio COMIPENS:</td>
+              <td>
+                <input
+                  type="text"
+                  name="folio"
+                  placeholder="Folio"
+                  id="folio"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>No. Aciertos:</td>
+              <td>
+                <input
+                  type="number"
+                  name="aciertos"
+                  id="aciertos"
+                  placeholder="Aciertos"
+                  min="0"
+                  max="128"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Carrera</td>
+              <td>
+                <select name="carrera" placeholder="Carrera" id="carrera">
+                  <option value="Programación" selected>Programación</option>
+                  <option value="Ventas">Ventas</option>
+                  <option value="Maquinas">Maquinas</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Fecha</td>
+              <td>
+                <input
+                  type="date"
+                  placeholder="Fecha"
+                  name="fecha"
+                  id="fecha"
+                  value="7/09/2022"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Nombre:</td>
+              <td>
+                <input
+                  type="text"
+                  placeholder="Nombre"
+                  name="nombre"
+                  id="nombre"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Apellido Paterno</td>
+              <td>
+                <input
+                  type="text"
+                  placeholder="Apellido Paterno"
+                  name="ap"
+                  id="ap"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Apellido Materno:</td>
+              <td>
+                <input
+                  type="text"
+                  placeholder="Apellido Materno"
+                  name="am"
+                  id="am"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Dia de Nacimiento:</td>
+              <td>
+                <input
+                  type="number"
+                  min="1"
+                  max="30"
+                  placeholder="Día"
+                  name="dia_a"
+                  id="dia_a"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Mes de Nacimiento:</td>
+              <td>
+                <input
+                  type="number"
+                  min="1"
+                  max="12"
+                  placeholder="Mes"
+                  name="mes_a"
+                  id="mes_a"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Año de Nacimiento:</td>
+              <td>
+                <input
+                  type="number"
+                  min="2000"
+                  max="2008"
+                  placeholder="Año"
+                  name="anio_a"
+                  id="anio_a"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Lugar de Nacimiento:</td>
+              <td>
+                <input
+                  type="text"
+                  placeholder="Lugar de Nacimiento"
+                  name="lugar"
+                  id="lugar"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>CURP:</td>
+              <td>
+                <input
+                  type="text"
+                  maxlength="18"
+                  placeholder="CURP DEL ASPIRANTE"
+                  name="curp_a"
+                  id="curp_a"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Sexo</td>
+              <td>
+                <select name="sexo" id="sexo" required>
+                  <option value="Masculino" selected>Masculino</option>
+                  <option value="Femenino">Femenino</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Padecimiento o Alergía:</td>
+              <td>
+                <input
+                  type="text"
+                  placeholder="Padecimiento o Alergía"
+                  name="alergia"
+                  id="alergia"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Teléfono Aspirante:</td>
+              <td>
+                <input
+                  type="tel"
+                  placeholder="Teléfono Aspirante"
+                  name="tel_a"
+                  id="tel_a"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Teléfono Padre o Madre:</td>
+              <td>
+                <input
+                  type="tel"
+                  placeholder="Teléfono Padre o Madre"
+                  name="tel_p"
+                  id="tel_p"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Teléfono Tutor:</td>
+              <td>
+                <input
+                  type="tel"
+                  placeholder="Teléfono Tutor"
+                  name="tel_t"
+                  id="tel_t"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Correo Electrónico Aspirante:</td>
+              <td>
+                <input
+                  type="email"
+                  placeholder="Correo Electrónico Aspirante"
+                  name="email_a"
+                  id="email_a"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Correo Electrónico Tutor:</td>
+              <td>
+                <input
+                  type="email"
+                  placeholder="Correo Electrónico Tutor"
+                  name="email_t"
+                  id="email_t"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center">
+                <input type="button" value="Guardar" onclick="imprimir()" />
+              </td>
+            </tr>
+          </table>
+        </form>
+        <form>
+          <table>
+            <tr>
+              <td colspan="2">
+                <center><h2>DIRECCIÓN DEL ASPIRANTE</h2></center>
+                <hr />
+              </td>
+            </tr>
+            <tr>
+              <td>Calle:</td>
+              <td>
+                <input
+                  type="text"
+                  required
+                  placeholder="Calle"
+                  name="calle"
+                  id="calle"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Número:</td>
+              <td>
+                <input
+                  type="number"
+                  min="1"
+                  max="100"
+                  required
+                  placeholder="Número Casa"
+                  name="num"
+                  id="num"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Colonia:</td>
+              <td>
+                <input
+                  type="text"
+                  required
+                  placeholder="Colonia"
+                  name="colonia"
+                  id="colonia"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Localidad:</td>
+              <td>
+                <input
+                  type="text"
+                  required
+                  placeholder="Localidad"
+                  name="localidad"
+                  id="localidad"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>CP:</td>
+              <td>
+                <input
+                  type="number"
+                  min="1000"
+                  max="9999"
+                  required
+                  placeholder="Código Postal"
+                  name="cp"
+                  id="cp"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Municipio:</td>
+              <td>
+                <input
+                  type="text"
+                  required
+                  placeholder="Municipio"
+                  name="municipio"
+                  id="municipio"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Estado:</td>
+              <td>
+                <input
+                  type="text"
+                  required
+                  placeholder="Estado"
+                  name="estado"
+                  id="estado"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <center>
+                  <h2>DATOS DE LA ESCUELA SECUNDARIA DE PROCEDENCIA</h2>
+                </center>
+                <hr />
+              </td>
+            </tr>
+            <tr>
+              <td>Nombre de la Escuela:</td>
+              <td>
+                <input
+                  type="text"
+                  required
+                  placeholder="Nombre de la escuela"
+                  name="secu"
+                  id="secu"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>CCT de la Escuela:</td>
+              <td>
+                <input
+                  type="text"
+                  required
+                  placeholder="CCT de la escuela"
+                  name="cct"
+                  id="cct"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Promedio Gral.:</td>
+              <td>
+                <input
+                  type="number"
+                  required
+                  min="5.0"
+                  max="10.0"
+                  step="0.1"
+                  placeholder="Promedio General"
+                  name="promedio"
+                  id="promedio"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Año de ingreso:</td>
+              <td>
+                <input
+                  type="number"
+                  required
+                  min="2015"
+                  max="2022"
+                  placeholder="Año de ingreso"
+                  name="ingreso"
+                  id="ingreso"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Año de egreso:</td>
+              <td>
+                <input
+                  type="number"
+                  required
+                  min="2015"
+                  max="2022"
+                  placeholder="Año de egreso"
+                  name="egreso"
+                  id="egreso"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <center><h2>DATOS DE LA MADRE, PADRE O TUTOR</h2></center>
+                <hr />
+              </td>
+            </tr>
+            <tr>
+              <td>Nombre:</td>
+              <td>
+                <input
+                  type="text"
+                  required
+                  placeholder="Nombre"
+                  name="nombre_t"
+                  id="nombre_t"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Apellido Paterno</td>
+              <td>
+                <input
+                  type="text"
+                  required
+                  placeholder="Apellido Paterno"
+                  name="ap_t"
+                  id="ap_t"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Apellido Materno:</td>
+              <td>
+                <input
+                  type="text"
+                  required
+                  placeholder="Apellido Materno"
+                  name="am_t"
+                  id="am_t"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>CURP Tutor:</td>
+              <td>
+                <input
+                  type="text"
+                  required
+                  maxlength="18"
+                  placeholder="CURP DEL TUTOR"
+                  name="curp_t"
+                  id="curp_t"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Ultimo grado de Estudios:</td>
+              <td>
+                <select required name="ultimo" id="ultimo">
+                  <option value="Primaria">Primaria</option>
+                  <option value="Secundaria">Secundaria</option>
+                  <option value="Bachillerato">Bachillerato</option>
+                  <option value="Técnica">Técnica</option>
+                  <option value="Profesional">Profesional</option>
+                  <option value="Maestría">Maestría</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2"><hr /></td>
+            </tr>
+
+            <tr>
+              <td colspan="2" align="center">
+                <input type="submit" value="Guardar" />
+              </td>
+            </tr>
+          </table>
+        </form>
+      </center>
+    </div>
+    <script>
+      const imprimir = () => {
+        var folio = document.querySelector("#folio").value;
+        var aciertos = document.querySelector("#aciertos").value;
+        var carrera = document.querySelector("#carrera").value;
+        var fecha = document.querySelector("#fecha").value;
+        var nombre = document.querySelector("#nombre").value;
+        var ap = document.querySelector("#ap").value;
+        var am = document.querySelector("#am").value;
+        document.querySelector("#c1").innerHTML = `<b>${folio}</b>`;
+        document.querySelector("#c2").innerHTML = `<b>${aciertos}</b>`;
+        document.querySelector("#c3").innerHTML = `<b>${carrera}</b>`;
+        document.querySelector("#c4").innerHTML = `<b>${fecha}</b>`;
+        document.querySelector(
+          "#c5"
+        ).innerHTML = `<b>${nombre} ${ap} ${am}</b>`;
+      };
+      const borrar = () => {
+        document.querySelector("#c1").innerHTML = ``;
+        document.querySelector("#c2").innerHTML = ``;
+        document.querySelector("#c3").innerHTML = ``;
+        document.querySelector("#c4").innerHTML = ``;
+      };
+    </script>
+  </body>
+</html>

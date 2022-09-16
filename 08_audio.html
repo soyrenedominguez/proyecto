@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AUDIO</title>
+  <style>
+    html {
+  font-size: 20px;
+}
+
+body,html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+div{
+  width: auto;
+  display: inline-block;
+  height: 40px;
+  background: black;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  font-weight: bolder;
+}
+div:hover{
+  transform: scale(1.1);
+  border:2px solid yellow;
+  transition: all ease 0.5s;
+}
+  </style>
+</head>
+<body>
+
+    <div  onclick="playSound('clap')">
+      CLAP
+    </div>
+    <div onclick="playSound('hihat')">
+      HIHAT
+    </div>
+    <div  onclick="playSound('kick')">
+      KICK
+    </div>
+    <div onclick="playSound('openhat')">
+      OPENHAT
+    </div>
+    <div  onclick="playSound('boom')">
+      BOOM
+    </div>
+    <div  onclick="playSound('ride')">
+      RIDE
+    </div>
+    <div onclick="playSound('snare')">
+      SNARE
+    </div>
+    <div onclick="playSound('tom')">
+      TOM
+    </div>
+    <div  onclick="playSound('tink')">
+      TINK
+    </div>
+
+  <audio id="clap" src="sounds/clap.wav"></audio>
+  <audio id="hihat" src="sounds/hihat.wav"></audio>
+  <audio id="kick" src="sounds/kick.wav"></audio>
+  <audio id="openhat" src="sounds/openhat.wav"></audio>
+  <audio id="boom" src="sounds/boom.wav"></audio>
+  <audio id="ride" src="sounds/ride.wav"></audio>
+  <audio id="snare" src="sounds/snare.wav"></audio>
+  <audio id="tom" src="sounds/tom.wav"></audio>
+  <audio id="tink" src="sounds/tink.wav"></audio>
+
+<script>
+  function playSound(code) {
+    const audio = document.querySelector(`#${code}`);
+    if (!audio) return;
+    audio.currentTime = 0;
+    audio.play();
+  }
+
+</script>
+
+
+</body>
+</html>

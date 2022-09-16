@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    background:black;
+    
+}
+#contenedor{
+    width: 80%;
+    height: 500px;
+    display: block;
+    margin: 100px auto;
+    border-radius: 20px;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#credencial{
+    width: 450px;
+    height: 250px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+    position: relative;
+}
+#titulo{
+    color: white;
+    position:absolute ;
+    top:150px;
+}
+#atras{
+    width: 450px;
+    height: 250px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+    position: relative;
+}
+#foto{
+    width: 100px;
+    border:3px solid black;
+    border-radius: 3px;
+    position:absolute;
+    top:70px;
+    right: 30px;
+
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#edomex{
+    width: 110px;
+    position:absolute;
+    top:20px;
+    left: 208px;
+
+}
+
+#cecytem{
+    width: 17px;
+    position:absolute;
+    top:20px;
+    left: 180px;
+
+}
+
+#linea{
+    width: 95%;
+    position:absolute;
+    top:40px;
+    left: 10px;
+
+}
+
+#colegio{
+    font-size: 10px;
+    width: 100%;
+    position:absolute;
+    top:50px;
+    left: 16px;
+
+}
+#m{
+    width: 130px;
+    position:absolute;
+    bottom:10px;
+    left: 10px;
+
+}
+
+#plantel{
+    font-size: 15px;
+    position:absolute;
+    top:70px;
+    left: 16px;
+
+}
+#nombre{
+    font-size: 15px;
+    position:absolute;
+    top:120px;
+    left: 16px;
+
+}
+
+#vigencia{
+    text-align: center;
+    font-size: 10px;
+    position:absolute;
+    bottom:20px;
+    right: 40px;
+
+}
+
+#fondo{
+    width: 440px;
+    height: 240px;
+    position:absolute;
+    bottom:5px;
+    left: 5px;
+    z-index:1;
+
+}
+#carrera{
+    font-size: 15px;
+    position:absolute;
+    top:20px;
+    left: 35px;
+    z-index:10;
+
+}
+
+#turno{
+    font-size: 15px;
+    position:absolute;
+    top:60px;
+    left: 35px;
+    z-index:10;
+
+}
+#control{
+    font-size: 15px;
+    position:absolute;
+    top:110px;
+    left: 35px;
+    z-index:10;
+
+}
+
+
+.flip-card {
+    background-color: transparent;
+    width: 450px;
+    height: 250px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
